@@ -1,0 +1,101 @@
+% ドキュメントの余白
+\documentclass[a4paper,12pt]{ujreport}
+\setlength{\textwidth}{38zw}
+\setlength{\oddsidemargin}{1cm}
+\setlength{\marginparwidth}{0pt}
+\setlength{\topmargin}{0.2cm}
+\renewcommand{\baselinestretch}{1.3}
+\setlength{\textheight}{37\baselineskip}
+\addtolength{\textheight}{\topskip}
+
+% 参考文献
+\renewcommand{\bibname}{参考文献}
+\renewcommand{\theenumi}{\roman{enumi}}
+\usepackage{makeidx}
+\pagestyle{headings}
+\usepackage[dvipdfmx]{graphicx}
+\pagenumbering{roman}
+
+% 枠関連の設定
+\usepackage{fancybox}
+\usepackage{framed}
+\newenvironment{longbox}{%
+  \def\FrameCommand{\fboxsep=\FrameSep \fbox}%
+  \MakeFramed {\FrameRestore}}%
+ {\endMakeFramed}
+
+% 使用するパッケージ
+
+
+\begin{document}
+
+%
+% 表紙
+%
+\begin{titlepage}
+\begin{center}
+{\large 令和X年度卒業論文\\}
+ \vspace{3cm}
+ {\Huge 卒業論文本体\\テンプレート\\} % タイトル
+ \vspace{4cm}
+{\large%
+  千葉工業大学~~先進工学部~~知能メディア工学科\\
+\vspace{3mm}18C3000~~苗字~名前\\
+\vspace{3cm}指導教員~~今野~将~~教授\\
+\vspace{1cm}提出日~~令和X年XX月XX日\\
+}
+\end{center}
+\end{titlepage}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%和文要旨%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{titlepage}
+\begin{longbox}
+\begin{center}
+ {\Huge 卒業論文本体テンプレート}\\
+ {\large%
+   \vspace{3mm}%
+   18C3000~~苗字~名前\\
+ }
+\end{center}
+{\bf 概要：}%
+本テンプレートは今野研究室の卒業論文本体を書くための表紙や余白等を示すものである．図表等の入れ方や文章の書き方などは記載しない．
+\\
+\\
+\end{longbox}
+\end{titlepage}
+
+% 目次
+\newpage
+\tableofcontents
+
+% ページ番号設定
+\newpage
+\setcounter{page}{0}\pagenumbering{arabic}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%　本文　%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{序論}\label{chap-序論}
+本文をここから書く
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter*{謝辞}
+\addcontentsline{toc}{chapter}{謝辞}
+\nocite{*}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%　謝辞　%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+謝辞を書く
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% 参考文献
+\newpage
+\addcontentsline{toc}{chapter}{参考文献}
+\bibliography{references}
+\bibliographystyle{junsrt}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%　付録　%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \appendix
+% 本文同様，chapterなどを使用して書く
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{document}
