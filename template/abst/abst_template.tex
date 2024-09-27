@@ -87,7 +87,7 @@ MacのTeXShopやコマンドによるタイプセットの場合，引用番号�
 
 基本的に変更後はLaTeX → BibTex → LaTeX → LaTeXと複数回のタイプセットを行うことを推奨する．
 
-\input{./input_other.tex}
+\input{input_other.tex}
 
 \section{本文}
 \subsection{文体}
@@ -304,7 +304,10 @@ LaTeXにおいて半角スペースはタイプセット時に無視されるこ
   \caption{画像サンプル}
   \label{img:sample1}
   \centering
+  % Mac/Linux
   \includegraphics[width=8cm]{./img/IPlogo1.png}
+  % Windows
+  % \includegraphics[width=8cm]{.\img\IPlogo1.png}
 \end{figure}
 
 のような画像を出力するためには以下のように記述する．
@@ -313,7 +316,10 @@ LaTeXにおいて半角スペースはタイプセット時に無視されるこ
 \caption{画像サンプル}
 \label{img:sample1}
 \centering
+% Mac/Linux
 \includegraphics[width=8cm]{./img/IPlogo1.png}
+% Windows
+% \includegraphics[width=8cm]{.\img\IPlogo1.png}
 \end{figure}
 \end{verbatim}
 
@@ -321,7 +327,10 @@ LaTeXにおいて半角スペースはタイプセット時に無視されるこ
   \caption{カラムをまたがる表}
   \label{img:sample2}
   \centering
+  % Mac/Linux
   \includegraphics[width=15cm]{./img/IPlogo1.png}
+  % Windows
+  % \includegraphics[width=15cm]{.\img\IPlogo1.png}
 \end{figure*}
 卒論本体を書く場合もそうであるが，画像ファイルなどは本テンプレートのようにひとつのフォルダにまとめておくと管理しやすいため，推奨する．
 
@@ -335,7 +344,10 @@ LaTeXにおいて半角スペースはタイプセット時に無視されるこ
 \caption{カラムをまたがる表}
 \label{img:sample2}
 \centering
+% Mac/linux
 \includegraphics[width=15cm]{./img/IPlogo1.png}
+% Windows
+% \includegraphics[width=15cm]{.\img\IPlogo1.png}
 \end{figure*}
 \end{verbatim}
 

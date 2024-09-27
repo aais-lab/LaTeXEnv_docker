@@ -35,5 +35,9 @@ thesis_template.texを開き、Ctrl+S(保存)をすると自動でタイプセ�
 
 中間ファイルやpdfはoutフォルダ下に出力されるように設定しています。この設定は.vscodeフォルダ内のsettings.jsonで変更可能です。
 
+### Windowsで使用する際の注意点
+template/abst/abst_template.texでは相対参照による図の参照を行なっています。
+コメントアウトでWindows用のパスも記載しているので、タイプセットの際にはコメントアウトをはずし、MacやLinuxで使用するコマンド部分をコメントアウトしてください。
+
 ## Author
 (Nao Yamanouchi)[https://github.com/ClairdelunaEve]
