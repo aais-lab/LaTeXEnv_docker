@@ -46,4 +46,4 @@ template/abst/abst_template.texでは相対参照による図の参照を行な�
 コメントアウトでWindows用のパスも記載しているので、タイプセットの際にはコメントアウトをはずし、MacやLinuxで使用するコマンド部分をコメントアウトしてください。
 
 ## Author
-(Nao Yamanouchi)[https://github.com/ClairdelunaEve]
+[Nao Yamanouchi](https://github.com/ClairdelunaEve)
