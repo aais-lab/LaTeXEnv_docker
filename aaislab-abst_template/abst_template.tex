@@ -1,0 +1,393 @@
+\documentclass[10pt,a4paper,twocolumn]{ujarticle}
+%upLaTeXを使用することを前提としています．
+% 規定の書式設定（変更しない）
+\setlength{\topmargin}{20mm}
+\addtolength{\topmargin}{-1in}
+\setlength{\oddsidemargin}{18mm}
+\addtolength{\oddsidemargin}{-1in}
+\setlength{\evensidemargin}{17mm}
+\addtolength{\evensidemargin}{-1in}
+\setlength{\textwidth}{174mm}
+\setlength{\textheight}{254mm}
+\setlength{\headsep}{0mm}
+\setlength{\headheight}{0mm}
+\setlength{\topskip}{0mm}
+
+\makeatletter
+\def\section{\@startsection {section}{1}{\z@}{2.0ex plus -1ex minus -.1ex}{0.5ex plus .1ex}{\normalsize\bf}}
+\makeatother
+\makeatletter
+\def\subsection{\@startsection {subsection}{1}{\z@}{-3.5ex plus -1ex minus -.2ex}{2.3ex plus .2ex}{\normalsize\bf}}
+\makeatother
+
+\setlength{\columnsep}{2zw}
+\renewcommand{\baselinestretch}{1}
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+\pagestyle{empty}
+% 規定の書式設定　ここまで
+
+% ユーザの書式設定
+
+% ユーザの書式設定　ここまで
+
+% 外部パッケージリスト
+\usepackage[dvipdfmx]{graphicx}
+\usepackage{threeparttable}
+
+\begin{document}
+\bibliographystyle{junsrt}
+
+% タイトル
+\twocolumn[%
+\begin{center}
+{\LARGE \textbf{卒業論文概要テンプレート(\LaTeX 版)}}\\
+\flushright{\large 16C3XXX~千葉~太郎，~~16C3YYY~工大~花子}\\
+\flushright{\large 指導教員~~今野~将~教授}\\
+\vskip\Cvs
+\end{center}
+]
+
+% 本文開始
+\section{はじめに}
+本テンプレートは知能メデイア工学科の卒業論文概要の\LaTeX 版のテンプレートである．
+
+今野研究室では論文等の執筆には\LaTeX のみ使用する．
+
+\section{推奨環境}\label{sec-推奨環境}
+\begin{itemize}
+  \setlength{\parskip}{0cm} % 段落間
+  \setlength{\itemsep}{0cm} % 項目間
+  \item Mac~OS
+  \item TeX~Shop
+  \item TeX~+~dvipdfmx
+  \item LaTeX：upLaTeX
+  \item 文字コード：UTF-8
+\end{itemize}
+基本的な環境構築は前期に行った\LaTeX 講座の資料を参照されたい．
+
+\section{概要の形式}
+\begin{itemize}
+  \setlength{\parskip}{0cm} % 段落間
+  \setlength{\itemsep}{0cm} % 項目間
+  \item 頁数：1件2頁（A4サイズ）
+  \item 余白：上下20mm，左右18mm
+  \item 段組：タイトルは一段組み，本文は2段組み
+  \item 色：カラー可（モノクロ印刷も考慮するとよい）
+\end{itemize}
+
+写真などの画像は印刷仕上がり10cm四方にするなら画像ファイルの解像度は200dpi(1000pxl)以上が必要である．
+
+\section{オプション}\label{sec-オプション}
+使用する文書スタイルの想定はujarticleで，規定のオプションは文字サイズの10pt，紙の大きさを示すa4paper，文書が2段組であることを示すtwocolumnである．
+
+画像が多くタイプセットに時間がかかる場合は，draftというオプションを追加するとよい．チェックや提出の際にはdraftはつけてはならないため注意すること．
+
+\section{タイプセット}\label{sec-タイプセット}
+MacのTeXShopやコマンドによるタイプセットの場合，引用番号や図表等の引用がうまく表示されず「??」となることがある．これは変更が反映された中間ファイルを読み込んだタイプセットが行われていないためで，もう一度タイプセットをすると解消させることが多い．
+
+基本的に変更後はLaTeX → BibTex → LaTeX → LaTeXと複数回のタイプセットを行うことを推奨する．
+
+\input{./input_other.tex}
+
+\section{本文}
+\subsection{文体}
+〜だ．〜である．のような常体を用いること．また，論文らしい表現であることが望ましく，「〜だと思った」のような表現は避けるべきである．「〜だと思った」は「〜と考えられる」，「〜だと感じた」は「〜と思われる」「〜と推測される」など適切な表現を試みる必要がある．
+
+また，他領域の教員が読むものであることを鑑みて，使用する用語に説明を付記することも検討する．
+
+\subsection{句読点}
+句点には全角の「．（ピリオド）」，読点には全角の「，（カンマ）」を用いる．
+ただし，数式中や英文中で「，」「．」を使用する際には半角文字を使用する．「、」「。」は使わない．
+
+Macにおいて句読点の設定は，システム環境設定 ＞ キーボード ＞ 入力ソース ＞ 日本語ーローマ字入力 の「句読点の種類」からできる．
+
+\subsection{全角文字と半角文字}
+全角文字と半角文字のある文字は次のように用いる．
+\begin{enumerate}
+  \item 括弧は原則全角の「（」「）」を用いる．ただし英文中や数式中は半角文字を用いること
+  \item 英数字，空白，記号類は原則半角文字を使用すること．ただし句読点については前述の通りにする
+  \item カタカナは全角文字を用いる
+  \item 引用符では開きと閉じを区別する．開きには「``」，閉じには「''」を用いる
+\end{enumerate}
+
+\subsection{半角スペース}\label{sub-半スペ}
+LaTeXにおいて半角スペースはタイプセット時に無視されることがある，例えば氏名間の空白などは「\verb|~|」によって空白を表示すると良い．
+
+この際，注意すべき点として本文中で使用する可能性のある「波ダッシュ（〜）」との混用が挙げられる．チルダを利用すると半角スペースとしてタイプセットされてしまうため，波ダッシュを使用する必要がある．しかしフォント上見分けがつかないこともあるため注意．
+
+\section{要素の書き方}
+\subsection{見出し}
+章や節には，\verb|\section|や\verb|\subsection|のコマンドを用いる．\verb|\chapter|を使用しない点に注意する．
+
+また，卒業論文本体と異なり，序論を「はじめに」，結論を「おわりに」とする．ひらがなのため注意すること．
+
+\subsection{引用ラベル}\label{sub-引用ラベル}
+\verb|\section|（章），\verb|\subsection|（節），\verb|table|（表），\verb|figure|（図）には\verb|\label|を付与すると良い．
+
+\verb|\label|は付与した場所にアンカーを設定するコマンドで，章番号や節番号，図表番号を任意のタイミングで使用できるようになる．
+
+\noindent
+例えば，引用ラベルの節（当節）は
+
+\verb|\subsection{引用ラベル}\label{sub-引用ラベル}|
+
+\noindent
+として記述されている．このため
+
+\verb|\ref{sub-引用ラベル}節|
+
+\noindent
+と記載すると，以下のように表現される．
+
+\ref{sub-引用ラベル}節
+
+
+このような方法によって，章節の移動や図表の追加によって番号が変更された際に，引用番号が自動的に更新される．
+
+\subsection{箇条書き}
+一般的な「・」を用いる箇条書きはitemizで作成できる．
+例えば
+\begin{itemize}
+  \item 箇条書きの例1
+  \item 一般的な「・」による箇条書き
+\end{itemize}
+は，以下の書式で記述できる．
+\begin{verbatim}
+  \begin{itemize}
+    \item 箇条書きの例
+    \item 一般的な「・」による箇条書き
+  \end{itemize}
+\end{verbatim}
+
+\subsection{番号付き箇条書き}
+番号付き箇条書きは箇条書きの番号がインクリメントされるものである．手順や番号が必要な場合に利用する．
+例えば
+\begin{enumerate}
+  \item ユーザへ入力を依頼する
+  \item 入力があるまで待つ
+  \item 入力された文字列を処理する
+\end{enumerate}
+は，以下の書式で記述できる．
+\begin{verbatim}
+  \begin{enumerate}
+    \item ユーザへ入力を依頼する
+    \item 入力があるまで待つ
+    \item 入力された文字列を処理する
+  \end{enumerate}
+\end{verbatim}
+番号付き箇条書きは，アラビア文字が設定されているが，ローマ数字や括弧付き文字に書式を変更することができる．
+
+\subsection{見出し付き箇条書き}
+見出し付き箇条書きは各箇条書きに見出しがついているものである．
+例えば
+\begin{description}
+  \item[果物] みかん，りんご，ぶどう
+  \item[野菜] \mbox{}\\
+  なす，きゅうり，トマト
+\end{description}
+は，以下の書式で記述できる．
+\begin{verbatim}
+  \begin{description}
+    \item[果物] みかん，りんご，ぶどう
+    \item[野菜] \mbox{}\\
+    なす，きゅうり，トマト
+  \end{description}
+\end{verbatim}
+用語の定義を列挙する場合など，見出し語を利用したい場合には有用．
+
+\subsection{表}
+表は\verb|table|コマンドによって作成することができる．
+
+例えば
+\begin{table}[tbh]
+  \caption{表のサンプル}
+  \label{tab:sample1}
+  \centering
+  \begin{tabular}{c|cc} 
+  & 見出し1 & 見出し2 \\ \hline
+  データ1 &  & \\
+  データ2 &  & \\
+  \hline \hline
+  \end{tabular}
+\end{table}
+
+は，以下の書式で記述できる．
+\begin{verbatim}
+  \begin{table}[tbh]
+    \caption{表のサンプル}
+    \label{tab:sample1}
+    \centering
+    \begin{tabular}{c|cc} 
+    & 見出し1 & 見出し2 \\ \hline
+    データ1 &  & \\
+    データ2 &  & \\
+    \hline \hline
+    \end{tabular}
+  \end{table}
+\end{verbatim}
+
+\input{tab_sample2.tex}
+
+表を作成する際は\verb|\caption|で表のキャプションを，\verb|\label|で表の引用ラベルを作成する．
+
+罫線は理解の妨げとならないよう，必要最低限であることが望ましい．
+
+\subsection{カラムにまたがる表}
+表内のデータが多い，入れるべき項目が多いなどの理由で左右のカラムにまたがる表を作る場合がある．例えば表\ref{tab:sample2}のような表を作成する場合，次のように記述する．
+
+\begin{verbatim}
+  \begin{table*}[tbh]
+    \caption{カラムにまたがる表}
+    \label{tab:sample2}
+    \centering
+      \begin{tabular}{c|cccccc} 
+        & 見出し1 & 見出し2 & 見出し3 & 見出し4 & 見出し5 & 見出し6\\ \hline
+        データ1 &  & \\
+        データ2 &  & \\
+        \hline \hline
+      \end{tabular}
+  \end{table*}
+\end{verbatim}
+
+今回，TeXファイルを見ればわかるが，表\ref{tab:sample2}の記述位置が当節外である．LaTeXはよしなに図表を配置するため，作成者の意図する位置に置かれない場合が多々ある．そのため，図表位置の調節は\verb|\begin{table*}[tbh]|に書かれている\verb|tbh|による図表位置の出力場所指示以外に，今回のように図表を書く位置を変更することで意図した位置に近い場所への出力を試みることもできる．
+
+\subsection{表の下に注釈を入れる}
+表内で使用している記号の説明など，表の下に注釈を入れることがある．表内の情報を読み取りやすくし，誤解のないように情報を読み手へ提示するために適切に利用することを推奨する．
+
+\begin{table}[tbh]
+  \caption{表に注釈を付与するサンプル}
+  \label{tab:sample3}
+  \centering
+  \begin{threeparttable}
+    \begin{tabular}{c|cc} 
+    & 見出し1 & 見出し2 \\ \hline
+    データ1 &  & \\
+    データ2 &  & \\
+    \hline \hline
+    \end{tabular}
+    \begin{tablenotes}
+      \item[*] 記号付きの注釈
+      \item[] 記号なしの注釈 
+      \end{tablenotes}
+  \end{threeparttable}
+\end{table}
+
+例えば注釈を書いた表は表\ref{tab:sample3}のようなものである．注釈を入れる場合には，\verb|\usepackage{threeparttable}|をファイル冒頭の外部パッケージリストに追加する必要がある．
+
+表\ref{tab:sample3}を出力するためには次のように記述する．
+\begin{verbatim}
+  \begin{table}[tbh]
+    \caption{表に注釈を付与するサンプル}
+    \label{tab:sample3}
+    \centering
+    \begin{threeparttable}
+      \begin{tabular}{c|cc} 
+      & 見出し1 & 見出し2 \\ \hline
+      データ1 &  & \\
+      データ2 &  & \\
+      \hline \hline
+      \end{tabular}
+      \begin{tablenotes}
+        \item[*] 記号付きの注釈
+        \item[] 記号なしの注釈 
+        \end{tablenotes}
+    \end{threeparttable}
+  \end{table}
+\end{verbatim}
+
+
+\subsection{図}
+図（画像）は\verb|figure|コマンドによって出力することができる．
+例えば，
+
+\begin{figure}[tbh]
+  \caption{画像サンプル}
+  \label{img:sample1}
+  \centering
+  \includegraphics[width=8cm]{./img/IPlogo1.png}
+\end{figure}
+
+のような画像を出力するためには以下のように記述する．
+\begin{verbatim}
+\begin{figure}[tbh]
+\caption{画像サンプル}
+\label{img:sample1}
+\centering
+\includegraphics[width=8cm]{./img/IPlogo1.png}
+\end{figure}
+\end{verbatim}
+
+\begin{figure*}[tbh]
+  \caption{カラムをまたがる表}
+  \label{img:sample2}
+  \centering
+  \includegraphics[width=15cm]{./img/IPlogo1.png}
+\end{figure*}
+卒論本体を書く場合もそうであるが，画像ファイルなどは本テンプレートのようにひとつのフォルダにまとめておくと管理しやすいため，推奨する．
+
+\subsection{カラムをまたがる図}
+複数図がある場合や横長の図を出力したい場合，1カラム内に出力すると潰れてしまったり見辛かったりする．その時は図\ref{img:sample2}のように出力することも可能である．
+
+図\ref{img:sample2}を出力するためには次のように記載する．
+
+\begin{verbatim}
+\begin{figure*}[tbh]
+\caption{カラムをまたがる表}
+\label{img:sample2}
+\centering
+\includegraphics[width=15cm]{./img/IPlogo1.png}
+\end{figure*}
+\end{verbatim}
+
+\subsection{数式}
+なんらかの指標や定義を数式を用いて表現する場合がある．
+
+インライン数式の場合は\verb|$ 数式 $|のような表記で出力することができる．
+これは例えば「質量とエネルギーの等価性を示す公式は $E=mc^2$ である」のような表記である．これは「\verb|質量とエネルギーの等価性を示す公式は $E=mc^2$ である|」のような記述で出力できる．
+
+他に，別行で出力する場合もある．
+
+この場合は「アインシュタイン方程式は \[R_{\mu \nu}-\frac{1}{2}Rg_{\mu \nu}=8\pi GT_{\mu \nu}\] である」のような出力である．
+これは
+\begin{verbatim}
+  アインシュタイン方程式は
+  \[R_{\mu \nu}-\frac{1}{2}Rg_{\mu \nu}=
+  8\pi GT_{\mu \nu}\] である
+\end{verbatim}
+という記述で出力できる．
+
+文章中で使用する場合は\verb|$ 数式 $|で，別行で出力する場合は\verb|\[ 数式 \]|で表現する．
+
+これまでに紹介した方式で出力する場合，式番号が出力されない．式番号を出力するためには，以下のような記述をすることとなる．
+
+\begin{verbatim}
+\begin{equation}
+  E=mc^{2}
+\end{equation}
+\end{verbatim}
+これによって式番号を付与した
+\begin{equation}
+  E=mc^{2}
+\end{equation}
+のような表現が可能となる．
+
+数式を記述する際の空白文字は無視されるため，空白を使用したい場合にはコマンドによる空白の挿入を利用すること．
+
+\subsection{参考文献の参照・引用}
+
+引用する参考文献は全てBibファイルに記載することとなる．その文献を引用する際には\cite{LatexGuide}のように表記する必要がある．この表記は\verb|\cite{ID}|によって出力できる．IDは任意の文字列を設定できるので，規則を自分なりに設定して（例えば，論文タイトルや発行年と著者など）おくと便利である．
+
+\section{参考文献情報の書き方}
+論文や書籍，Webサイトなど，引用したいものの発行形態によって記載すべき情報が異なる．Google Scholarやjstageではそれぞれの文献のスタイルに合わせた引用情報が取得可能な場合が多いのでサイト内にある「cite / share / 引用情報 / Bibtex」などの表記を探すとよい．
+URLの表記でエラーが出る場合があるが，その時は\verb|\usepackage{url}|を記載することで解消する場合がある．
+
+
+\section{そのほか}
+詳細なエラー情報，使用にあたっての注意や小技等についてはWikiがあるので参照すると良いかもしれない\cite{TeXWiki}．
+
+% 参考文献
+{\small
+\addcontentsline{toc}{chapter}{参考文献}
+\bibliography{bibsample} % 参考文献を記載したbibファイル
+}
+\end{document}
