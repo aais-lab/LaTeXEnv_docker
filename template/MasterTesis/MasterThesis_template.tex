@@ -1,5 +1,5 @@
 % ドキュメントの余白
-\documentclass[a4paper,12pt]{ujreport}
+\documentclass[12pt,a4paper]{jreport}
 \setlength{\textwidth}{38zw}
 \setlength{\oddsidemargin}{1cm}
 \setlength{\marginparwidth}{0pt}
@@ -11,9 +11,13 @@
 % 参考文献
 \renewcommand{\bibname}{参考文献}
 \renewcommand{\theenumi}{\roman{enumi}}
+\bibliographystyle{junsrt}
 \usepackage{makeidx}
 \pagestyle{headings}
+\usepackage{graphicx}
 \pagenumbering{roman}
+\usepackage{url}
+\usepackage{amsmath}
 
 % 枠関連の設定
 \usepackage{fancybox}
@@ -23,25 +27,26 @@
   \MakeFramed {\FrameRestore}}%
  {\endMakeFramed}
 
-% 使用するパッケージ
-\usepackage[dvipdfmx]{graphicx}
+\makeindex
 
 \begin{document}
+
 
 %
 % 表紙
 %
 \begin{titlepage}
 \begin{center}
-{\large 令和X年度卒業論文\\}
+{\large 令和X年度修士学位論文\\}
  \vspace{3cm}
- {\Huge 卒業論文本体\\テンプレート\\} % タイトル
- \vspace{4cm}
+ {\Huge タイトル\\
+\vspace{5mm}に関する研究\\}
+\vspace{4cm}
 {\large%
-  千葉工業大学~~先進工学部~~知能メディア工学科\\
-\vspace{3mm}18C3000~~苗字~名前\\
-\vspace{3cm}指導教員~~今野~将~~教授\\
-\vspace{1cm}提出日~~令和X年XX月XX日\\
+  千葉工業大学~~先進工学研究科~~知能メディア工学専攻\\
+\vspace{3mm}22S30xx~~名前\\
+\vspace{3cm}指導教員~~今野~~将~~教授\\
+\vspace{1cm}20XX年3月\\
 }
 \end{center}
 \end{titlepage}
@@ -50,18 +55,23 @@
 \begin{titlepage}
 \begin{longbox}
 \begin{center}
- {\Huge 卒業論文本体テンプレート}\\
+ {\Huge タイトル}\\
  {\large%
    \vspace{3mm}%
-   18C3000~~苗字~名前\\
+   22S30xx~~名前\\
  }
 \end{center}
 {\bf 概要：}%
-本テンプレートは今野研究室の卒業論文本体を書くための表紙や余白等を示すものである．図表等の入れ方や文章の書き方などは記載しない．
-\\
-\\
+
+
+
+
 \end{longbox}
 \end{titlepage}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
 
 % 目次
 \newpage
@@ -70,12 +80,10 @@
 % ページ番号設定
 \newpage
 \setcounter{page}{0}\pagenumbering{arabic}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%　本文　%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\chapter{序論}\label{chap-序論}
-本文をここから書く
-%各章毎にファイルを分割して\inputで読み込ませると管理が楽
+%%%%%%%%%%%%%%%%%%%%%% 本文 %%%%%%%%%%%%%%%%%%%%%%
+% 各章毎にファイルを分割して\inputで読み込ませると管理が楽
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \chapter*{謝辞}
 \addcontentsline{toc}{chapter}{謝辞}
@@ -87,15 +95,24 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % 参考文献
+\nocite{*}
 \newpage
+\pagestyle{plain}
 \addcontentsline{toc}{chapter}{参考文献}
-\bibliography{references}
-\bibliographystyle{junsrt}
-
+%参考文献ファイル（Bibファイル）を使って参考文献リストを作る場合
+\bibliography{reference}
+%参考文献ファイルの名前は上記の場合 reference.bibになる
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%　付録　%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % \appendix
 % 本文同様，chapterなどを使用して書く
+
+%図の一覧を出力する場合以下のコメントを外す
+%\listoffigures
+
+%表の一覧を出力する場合以下のコメントを外す
+%\listoftables
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 
 \end{document}
