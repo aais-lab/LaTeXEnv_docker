@@ -20,9 +20,17 @@ git clone https://github.com/aais-lab/LaTeXEnv_docker.git --depth 1
 [ダウンロード(zip)](https://github.com/aais-lab/LaTeXEnv_docker/archive/refs/heads/main.zip)
 
 ### docker imageのビルド
+dockerイメージをビルドする際は、使用するDockerfileのパスを指定する必要があります。
+#### Dockerfileがあるディレクトリまで移動してイメージをビルドする時
 ```
 cd LaTeXEnv_docker/dev
 docker image build -t latex-docker .
+```
+
+#### Dockerfileをパスから指定してビルドする時
+```
+docker image build -t latex-docker path/to/dockerfile
+
 ```
 
 dockerイメージのビルドは、10〜20分で終わります。
