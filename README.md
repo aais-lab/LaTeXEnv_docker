@@ -46,5 +46,10 @@ template/workspace直下に入っている.vscodeおよび.latexmkrcを任意の
 template/abst/abst_template.texでは相対参照による図の参照を行なっています。
 コメントアウトでWindows用のパスも記載しているので、タイプセットの際にはコメントアウトをはずし、MacやLinuxで使用するコマンド部分をコメントアウトしてください。
 
+## Update Note
+- タイプセット時に太字となるはずの章タイトルなどが太字にならない問題を修正（2026/11/09）
+- `docker build`時にすごく時間がかかる問題を若干解消（2026/11/09）
+  - texlive-fullを入れていたので最低限の環境に修正
+
 ## Author
 [Nao Yamanouchi](https://github.com/ClairdelunaEve)
