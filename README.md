@@ -33,8 +33,8 @@ docker image build -t latex-docker path/to/dockerfile
 
 ```
 
-dockerイメージのビルドは、10〜20分で終わります。
-最終的なdockerイメージは4.5〜9GBになります。
+dockerイメージのビルドは、10分程度で終わります。
+最終的なdockerイメージは2〜3GBになります。
 
 ### タイプセットのテスト
 LaTeX WorkShopをインストールして有効化したVSCodeで、LaTeXEnv_docker/testを開く。
